@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Basic Intro</title>
+</head>
+<body>
+hr (horizontal rule):<hr>
+nothing: Normal<br>
+b: <b>Bold</b><br>
+em: <em>Italic</em><br>
+u: <u>Under line: Already obsolete, deprecated</u><br>
+s: <s>Strikethrough</s><br>
+a: <a href="https://aiyouheiha.github.io/" target="_blank">Home: open in new tag / remote link</a><br>
+a: <a href="test1.html" target="_self">Test1: open in current tag / local link</a><br>
+a: <a href="test2.html">Test2: open in current tag / local link</a><br>
+table + tr (table row) + td (table data): <br>
+<table>
+    <tr>
+        <td>Without border</td>
+    </tr>
+    <tr>
+        <td>H</td><td>e</td><td>l</td><td>l</td><td>o</td>
+    </tr>
+    <tr>
+        <td>W</td><td>o</td><td>r</td><td>l</td><td>d</td><td>!</td>
+    </tr>
+</table><br>
+table + tr (table row) + td (table data): <br>
+<table border="1px">
+    <tr>
+        <td>With border, but which is deprecated using in h5</td>
+    </tr>
+    <tr>
+        <td>H</td><td>e</td><td>l</td><td>l</td><td>o</td>
+    </tr>
+    <tr>
+        <td>W</td><td>o</td><td>r</td><td>l</td><td>d</td><td>!</td>
+    </tr>
+</table><br>
+table + tr (table row) + td (table data) + th (table header) + thead + tbody + tfoot + colspan + rowspan: <br>
+<table border="1px" align="center">
+    <thead>
+    <tr>
+        <th colspan="6">With border and align, but which are deprecated using in h5</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>H</td><td>e</td><td>l</td><td>l</td><td>o</td><td rowspan="2">!</td>
+    </tr>
+    <tr>
+        <td>W</td><td>o</td><td>r</td><td>l</td><td>d</td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+        <td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td>
+    </tr>
+    </tfoot>
+</table><br>
+ol (ordered list) + li: <br>
+<ol>
+    <li>first line</li>
+    <li>second line</li>
+    <li>third line</li>
+</ol><br>
+ol (ordered list) + li + reversed: <br>
+<ol reversed>
+    <li>first line</li>
+    <li>second line</li>
+    <li>third line</li>
+</ol><br>
+ol (ordered list) + li + type: <br>
+<ol type="A">
+    <li>first line</li>
+    <li>second line</li>
+    <li>third line</li>
+</ol><br>
+ol (ordered list) + li: <br>
+Nested lists: <br>
+<ol>
+    <li>Title 1</li>
+    <ol type="a">
+        <li>Title 2</li>
+        <li>Title 2</li>
+        <ol type="i">
+            <li>Title 3</li>
+            <li>Title 3</li>
+        </ol>
+    </ol>
+    <li>Title 1</li>
+    <ol type="I">
+        <li>Title 2</li>
+        <li>Title 2</li>
+    </ol>
+</ol><br>
+ul (unordered list) + li: <br>
+<ul>
+    <li>first line</li>
+    <li>second line</li>
+    <li>third line</li>
+</ul><br>
+form: <br>
+<form>
+    <input><br>
+    <input type="text" value="default value"><br>
+    <input type="text" placeholder="default value"><br>
+    <input type="text" placeholder="default value" maxlength="10"><br>
+    <input type="text" placeholder="default value" size="10"><br>
+    <input type="text" placeholder="default value" readonly><br>
+    <input type="text" value="default value" readonly><br>
+    <input type="password" placeholder="password"><br>
+    <textarea placeholder="text"></textarea><br>
+    <textarea placeholder="text">default text</textarea><br>
+    <textarea rows="3" cols="3">default text</textarea><br>
+    <input type="button" value="button"><br>
+    <button>button</button><br>
+    <input type="submit"><br>
+    <input type="submit" value="submit"><br>
+    <input type="range"><br>
+    <input type="range" min="10" max="100"><br>
+    <input type="range" min="10" max="100" step="10"><br>
+    <input type="range" min="10" max="100" step="10" value="10"><br>
+    <input type="number"><br>
+    <input type="number" min="1" max="11" step="2" value="5"><br>
+    <textarea cols="100" rows="5">
+        For input type checkbox, radio, select, even text and so on,
+        attribute "name" is the param name when submit form,
+        "value" is the param value when **submit form**, without value set default value is "on".
+        e.g. test.cn/test?test=test1
+        Then "test" is "name" and "test1" is "value".
+    </textarea><br>
+    <input type="checkbox"><br>
+    <input type="checkbox" name="checkbox1">hello<br>
+    <input type="radio"><br>
+    <input type="radio" name="radio1">hello<br>
+    <input type="radio" name="hello" value="hello1" checked>hello1<br>
+    <input type="radio" name="hello" value="hello2">hello2<br>
+    <input type="radio" name="hello" value="hello3">hello3<br>
+    <select name="select">
+        <option>select1</option>
+        <option>select2</option>
+        <option>select3</option>
+    </select><br>
+    <input type="text" list="data_list" name="data_list">
+    <datalist id="data_list">
+        <option>data1</option>
+        <option>data2</option>
+        <option>data3</option>
+    </datalist><br>
+</form>
+<form>
+    Set field "name", and for someone set field "value", and submit, then params will be set after url: <br>
+    Email: <input type="email"><br>
+    Tel: <input type="tel"><br>
+    Url: <input type="url"><br>
+    Date: <input type="date"><br>
+    Color: <input type="color" name="color"><br>
+    Search: <input type="search"><br>
+    Hidden: <input type="hidden" name="hidden" value="hidden_value"><br>
+    Image: <input type="image" src="../img/referer.png" width="600px"><br>
+    File: <input type="file"><br>
+    File + multiple: <input type="file" multiple><br>
+    File + required: <input type="file" required><br>
+    <input type="submit">
+</form>
+img: <img src="../img/icon/flag_chn_1.jpg"><br>
+img + alt (Can not find img, then show alt content): <img src="../img/icon/flag_chn_1_unknown_source.jpg" alt="China"><br>
+img + width: <img src="../img/icon/flag_usa_1.jpg" width="50px"><br>
+img + a:
+<a href="https://www.baidu.com" target="_blank">
+    <img src="../img/logo_baidu_2.png" width="100px">
+</a><br>
+form + input + image (click to get x and y location if this picture, and then set map.area's coords for below, which is a same picture): <br>
+By the way: location of the upper left of one picture is (0, 0), its why the getting location could be used below.
+<form>
+    <input type="image" src="../img/search_engine_1.jpg">
+</form><br>
+img + usemap (partition response map: diff part of one picture redirect to diff site): <br>
+<img src="../img/search_engine_1.jpg" usemap="#search_engine_1_map">
+<map id="search_engine_1_map">
+    <area href="https://www.baidu.com/" alt="百度搜索" shape="rect" coords="30,20,190,90" target="_blank">
+    <area href="https://www.so.com/" alt="360搜索" coords="210,20,390,90" target="_blank">
+    <area href="http://www.chinaso.com/" alt="中国搜索" coords="30,110,190,180" target="_blank">
+    <area href="https://www.sogou.com/" alt="搜狗搜索" coords="210,110,390,180" target="_blank">
+    <area href="https://www.dgso.cn/" alt="稻谷搜索" coords="30,200,190,270" target="_blank">
+    <area href="http://cn.bing.com/" alt="Bing" coords="210,200,390,270" target="_blank">
+</map><br>
+form + input + image:
+<form>
+    <input type="image" src="../img/icon/btn_play_1.jpg">
+</form>
+img + usemap (partition response map: only particular part could link to the target site): <br>
+<img src="../img/icon/btn_play_1.jpg" usemap="#btn_play_1_map">
+<map id="btn_play_1_map">
+    <area href="https://aiyouheiha.github.io/" alt="aiyouheiha.github.io" shape="circle" coords="35,35,33" target="_blank">
+</map><br>
+video: <br>
+<video src=""></video><br>
+video + autoplay: <br>
+<video src="" autoplay></video><br>
+video + controls + source: <br>
+<video src="" controls>
+    <source src="" type="video/mp4">
+    <source src="" type="video/ogg">
+</video><br>
+video + poster (default picture show while video first load): <br>
+<video src="" poster="../img/background_1.jpg"></video><br>
+</body>
+</html>

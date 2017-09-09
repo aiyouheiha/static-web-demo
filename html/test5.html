@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cascading Style Sheets 盒子模型</title>
+    <style>
+        .div {
+            /* 内容和边界间的距离，内边距 */
+            padding: 10px 30px 10px 20px;
+            /* 边界和外部其他组件的距离，外边距 */
+            margin: 100px 50px 100px 50px;
+            background-color: #ffbd1f;
+            /* 设置背景颜色的生效位置 */
+            background-clip: content-box;
+        }
+        .border {
+            border: solid 5px #ff2c16;
+        }
+    </style>
+</head>
+<body>
+<hr>
+<div class="div border">Content</div>
+<hr>
+</body>
+</html>

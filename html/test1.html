@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cascading Style Sheets 层叠样式表</title>
+    <style type="text/css">
+        * {
+            font-size: 30px;
+            color: #ff2a45;
+        }
+        a {
+            font-size: 30px;
+            color: #ff2a45;
+        }
+    </style>
+    <style type="text/css">
+        .a {
+            color: #97ff5a;
+        }
+        #a {
+            font-style: italic;
+        }
+        .test_style_1 {
+            font-size: 300px;
+        }
+        [target] {
+            font-size: 200px;
+        }
+        [target="_blank"] {
+            color: #56f8ff;
+        }
+        a:hover {
+            font-size: 500px;
+            color: #ff26fc;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="../css/test1.css">
+</head>
+<body>
+不使用样式（或使用配置的统一“a”标签样式）<br>
+<a>Test1</a><br>
+元素内嵌样式<br>
+<a style="font-size: 40px">Test1</a><br>
+<a style="font-size: 80px">Test1</a><br>
+<a style="font-size: 120px; color: #ffbd1f">Test1</a><br>
+文档内嵌样式<br>
+<a id="a">Test1</a><br>
+<a class="a">Test1</a><br>
+<a class="test_style_1">Test1</a><br>
+<a class="a test_style_1">Test1</a><br>
+<a href="https://www.baidu.com/">Baidu</a><br>
+<a href="https://www.baidu.com/" target="_self">Baidu</a><br>
+<a href="https://www.baidu.com/" target="_blank">Baidu</a><br>
+外部引用样式<br>
+<a class="css_test_style_1">Test1</a><br>
+使用样式表的不同命名方式，对应了不同的应用场景 <br>
+e.g. <br>
+* >>> 对所有标签统一规定样式<br>
+a >>> 对a标签统一规定样式<br>
+.a >>> 对class中包含了名称a（class="a xxx ..."）的标签使用样式（.a不等于a）<br>
+#a >>> 对id="a"的标签使用样式，且即使可以显示，但完全不推荐出现id取值相同的标签<br>
+[target] >>> 对所有定义了target属性的标签使用样式<br>
+[target="_blank"] >>> 对所有定义了target属性，且值为_blank的标签使用样式<br>
+a:hover >>> 规定当光标定位到a标签元素上时，显示的样式（除非当前a标签使用了元素内嵌样式，当使用了元素内嵌样式时，同一种样式，以内嵌为准）<br>
+a:xxx >>> its more
+</body>
+</html>

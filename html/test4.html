@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cascading Style Sheets 过渡/动画/变换</title>
+    <style>
+        .title {
+            font-size: 30px;
+            color: #ffbd1f;
+        }
+        .title:hover {
+            font-size: 50px;
+            color: #56f8ff;
+            transition-delay: 3s;
+            transition-duration: 3s;
+            /* field for Chrome and Safari */
+            -webkit-transition-duration: 5s;
+            /* field for Opera */
+            -o-transition-duration: 10s;
+            /* field for mozilla Firefox */
+            -moz-transition-duration: 7s;
+            /* field for microsoft ms IE */
+            -ms-transition-duration: 7s;
+            transition-property: font-size;
+            transition-timing-function: ease-in;
+        }
+        .border {
+            border: solid coral;
+        }
+        .title2 {
+            font-size: large;
+        }
+        .title2:hover {
+            animation-duration: 3s;
+            animation-delay: 1s;
+            animation-name: title2;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        @keyframes title2 {
+            from {
+                font-size: x-large;
+                color: #1a1aff;
+            }
+            50% {
+                color: #97ff5a;
+            }
+            100% {
+                color: #ffbd1f;
+            }
+            to {
+                font-size: xx-large;
+            }
+        }
+        .title3 {
+            font-size: large;
+        }
+        .title3:hover {
+            animation-duration: 5s;
+            animation-delay: 100ms;
+            animation-name: title3;
+            animation-iteration-count: 3;
+            animation-direction: alternate;
+        }
+        @keyframes title3 {
+            to {
+                font-size: xx-large;
+            }
+        }
+        .p {
+            width: 40px;
+            height: 40px;
+            background-color: #56f8ff;
+        }
+        .p:hover {
+            width: 40px;
+            height: 40px;
+            background-color: black;
+            /* rotate 旋转角度；scale(x放大倍数，y放大倍数) 缩放；scale(整体放大倍数) 缩放； */
+            transform: rotate(30deg) scale(2, 4);
+            /* without transform-origin default center as center, now bottom-right as center to do transform */
+            transform-origin: bottom right;
+        }
+        .p1 {
+            width: 50px;
+            height: 50px;
+            background-color: coral;
+        }
+        .p1:hover {
+            width: 50px;
+            height: 50px;
+            background-color: #ff1b11;
+            transform: rotate(-30deg);
+            transform-origin: 45px 20px;
+        }
+    </style>
+</head>
+<body>
+<h1 class="title border">Cascading Style Sheets</h1>
+<h2 class="title2">Cascading Style Sheets</h2>
+<h3 class="title3">Cascading Style Sheets</h3>
+<hr>
+<p class="p"></p><br>
+<p class="p1"></p><br>
+</body>
+</html>

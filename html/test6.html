@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cascading Style Sheets</title>
+    <style>
+        .div {
+            text-align: center;
+        }
+        .img {
+            margin: 100px auto;
+            width: 50%;
+        }
+        /* html:hover .img 当光标定位到html窗口触发动画效果，该变换对应应用了.img style的标签 */
+        html:hover .img {
+            animation-name: img;
+            animation-delay: 200ms;
+            animation-duration: 2s;
+            /* 动画结束后，只要光标不移动出感应区，动画保持to的效果不变（针对动画，过渡本就是这种方式） */
+            -moz-animation-fill-mode: forwards;
+        }
+        @keyframes img {
+            to {
+                width: 7%;
+                margin-top: 0pc;
+                margin-left: 100px;
+            }
+        }
+        .p {
+            font-family: fantasy;
+            font-size: 100px;
+            text-shadow: 10px 10px 5px brown;
+            /* opacity 透明度 */
+            opacity: 0.5;
+        }
+        /* html:hover .p 当光标定位到html窗口触发动画效果，该变换对应应用了.p style的标签 */
+        html:hover .p {
+            transition-delay: 100ms;
+            transition-duration: 2s;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="div">
+    <img class="img" src="../img/background_1.jpg">
+    <p class="p">Hello World</p>
+</div>
+</body>
+</html>

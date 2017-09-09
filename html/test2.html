@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cascading Style Sheets</title>
+    <style type="text/css">
+        .border {
+            border-style: dashed;
+            border-color: #1a1aff;
+            border-top-style: dotted;
+            border-top-color: red;
+        }
+        .border1 {
+            border: dashed coral;
+            border-top: dotted #ffbd1f;
+        }
+        .border2 {
+            border: solid cornflowerblue 10px;
+            background: antiquewhite url("../img/background_1.jpg") no-repeat;
+        }
+        .border3 {
+            border: solid cornflowerblue 10px;
+            background: antiquewhite url("../img/background_1.jpg") no-repeat;
+            border-radius: 60px/100px;
+        }
+        .border4 {
+            border: solid cornflowerblue 10px;
+            background: antiquewhite url("../img/background_1.jpg") no-repeat;
+            border-radius: 60px/60px;
+        }
+        .size {
+            width: 800px;
+            height: 500px;
+        }
+        .font {
+            font-size: 20px;
+            color: burlywood;
+        }
+        .background {
+            background: bisque url("../img/background_2.jpg") no-repeat fixed;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body class="background">
+Attributes used by style border is thought could be optimized by ide (the way like border1 and border2).
+<p class="border font">Hello World!</p>
+<p class="border1 font">Hello World!</p>
+<p class="border2 size font">
+    Hello World!<br>
+    Hello World!<br>
+    Hello World!<br>
+    Hello World!<br>
+    Hello World!<br>
+    Hello World!<br>
+    Hello World!<br>
+    Hello World!<br>
+    Without background picture will show background color.
+</p>
+<p class="border3 font size">
+    <br>
+    <br>
+    <br>
+    Hello World!
+</p>
+<p class="border4 font size">
+    <br>
+    <br>
+    <br>
+    Hello World!
+</p>
+</body>
+</html>

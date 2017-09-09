@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+    <script src="../js/test7.js"></script>
+    <script>
+        alert("Hello World");
+    </script>
+    <script>
+        function click_button() {
+            var date = new Date();
+            document.write("<h1>Hello, " + date.getFullYear() + "</h1>");
+            var message = prompt("Input Message", "");
+            document.write("<h2>Message is >>> " + message + "</h2>");
+        }
+    </script>
+    <script>
+        function login_on_click() {
+            var username = document.getElementById("login_username").value;
+            var password = document.getElementById("login_password").value;
+            while (username != "test") {
+                username = prompt("Error username, again: ", "");
+            }
+            while (password != "123456") {
+                password = prompt("Error password, again: ", "");
+            }
+            document.write("Login Success");
+        }
+        function login_on_submit() {
+            var username = document.getElementById("login_username_2").value;
+            var password = document.getElementById("login_password_2").value;
+            while (username != "test") {
+                username = prompt("Error username, again: ", "");
+            }
+            while (password != "123456") {
+                password = prompt("Error password, again: ", "");
+            }
+            document.write("Login Success");
+        }
+        function click_action() {
+            // Can not use "click" as method name, "click" might be one of system methods.
+            var username = document.getElementById("click_username").value;
+            var password = document.getElementById("click_password").value;
+            var clickForm = document.getElementById("click_form");
+            clickForm.innerHTML += "<hr>Username: " + username + "<br>";
+            if (username == "test" && password == "123456") {
+                clickForm.innerHTML += "Login Success";
+            } else {
+                clickForm.innerHTML += "Login Failed";
+            }
+        }
+    </script>
+    <style>
+        .border {
+            border: solid cornflowerblue;
+            padding: 30px;
+            margin: 40px;
+        }
+        .form {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <button onclick="click_button()">Click Button</button>
+    <hr>
+    <form id="login_form" class="border">
+        <input id="login_username" placeholder="Username"><br>
+        <input id="login_password" type="password" placeholder="Password"><br>
+        <button type="submit" onclick="login_on_click()">Login</button>
+    </form>
+    <form id="login_form_2" class="border" onsubmit="login_on_submit()">
+        <input id="login_username_2" placeholder="Username"><br>
+        <input id="login_password_2" type="password" placeholder="Password"><br>
+        <button type="submit">Login</button>
+    </form>
+    <form id="click_form" class="border form">
+        <input id="click_username" placeholder="Username"><br>
+        <input id="click_password" type="password" placeholder="Password"><br>
+        <button onclick="click_action()">Click</button><br>
+    </form>
+</div>
+</body>
+</html>
